@@ -1,0 +1,19 @@
+USE Pracownicy;
+
+SELECT * FROM Pracownicy 
+WHERE Imie = 'Anna';
+
+SELECT * FROM Pracownicy 
+WHERE Imie IS NULL OR Imie = '';
+
+SELECT DISTINCT Kurs FROM Pracownicy 
+WHERE Wiek BETWEEN 30 AND 40;
+
+SELECT Wiek FROM Pracownicy 
+WHERE ID BETWEEN 1 AND 7;
+
+SELECT * FROM Pracownicy 
+WHERE Wiek IS NULL;
+
+ALTER TABLE Pracownicy 
+RENAME COLUMN Kurs TO Szkolenie;
