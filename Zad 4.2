@@ -1,0 +1,26 @@
+USE Pracownicy;
+
+ALTER TABLE Pracownicy
+RENAME COLUMN NR TO ID;
+
+SELECT * FROM Pracownicy 
+WHERE Wiek=28
+
+SELECT * FROM Pracownicy 
+WHERE Wiek<=30
+
+SELECT * FROM Pracownicy 
+WHERE Nazwisko LIKE '%ski%'
+
+SELECT * FROM Pracownicy 
+WHERE ID IN(1,4,7,18,20)
+
+SELECT * FROM Pracownicy 
+WHERE ID IS NOT NULL 
+  AND Imie IS NOT NULL 
+  AND Nazwisko IS NOT NULL 
+  AND Wiek IS NOT NULL 
+  AND Kurs IS NOT NULL
+  
+SELECT * FROM Pracownicy 
+WHERE KURS NOT LIKE 'DS%'
