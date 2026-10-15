@@ -1,0 +1,50 @@
+CREATE DATABASE School_Coding;
+USE School_Coding
+
+CREATE TABLE Mentors (
+ID INTEGER PRIMARY KEY,
+Imię TEXT,
+Nazwisko TEXT,
+Specjalizacja TEXT, 
+Data_zatrudnienia DATE,
+Data_zwolnienia DATE
+);
+
+
+INSERT INTO Mentors (ID, Imię, Nazwisko, Specjalizacja, Data_zatrudnienia, Data_zwolnienia)
+VALUES (1,'Jan','Kowalski','Informatyka','2015-01-01','2016-01-01'),
+ (2,'Anna','Nowak','Biologia','2016-01-01','2017-01-01'),
+ (3,'Karolina','Wiśniewski','Chemia','2017-01-01','2018-01-01'),
+ (4,'Mateusz','Kowalczyk','Matematyka','2018-01-01','2019-01-01'),
+ (5,'Paulina','Stoch','Historia','2019-01-01','2020-01-01'),
+ (6,'Łukasz','Żyła','WOS','2020-01-01','2021-01-01'),
+ (7,'Krzystzof','Małysz','Polski','2021-01-01','2022-01-01'),
+ (8,'Henryk','Lewandowski','Geografia','2022-01-01','2023-01-01'),
+ (9,'Julia','Zieliński','Angielski','2023-01-01','2024-01-01'),
+ (10,'Helena','Grabara','Niemiecki','2024-01-01','2025-01-01');
+
+SELECT * FROM Mentors
+
+UPDATE Mentors
+SET Nazwisko='Wisła'
+WHERE id=5
+
+SELECT * FROM Mentors
+WHERE id=5;
+
+UPDATE Mentors
+SET Specjalizacja='Budownictwo'
+WHERE id=9
+
+SELECT * FROM Mentors
+WHERE id=9;
+
+ALTER TABLE Mentors
+ADD Wynagrodzenie DECIMAL (10,2) CHECK( Wynagrodzenie>=0);
+
+UPDATE Mentors
+SET Wynagrodzenie=1000.00
+where id IN(1,2,3);
+
+SELECT * FROM Mentors
+WHERE id IN(1,2,3)
