@@ -1,0 +1,15 @@
+SELECT CONCAT(first_name, ' ', last_name) AS Pracownik FROM aggregates.batman;
+
+SELECT CONCAT(gift, ' – cena: ', price) AS cennik FROM aggregates.batman;
+
+SELECT CONCAT(first_name, ' ', last_name, ' – ', gift, ' – cena: ', price) AS cennik FROM aggregates.batman;
+
+SELECT UPPER(gift) FROM aggregates.batman;
+
+SELECT LOWER(first_name) FROM aggregates.batman;
+
+SELECT last_name, LENGTH(last_name) FROM aggregates.batman;
+
+SELECT LEFT(first_name, 2)  FROM aggregates.batman;
+
+SELECT first_name, last_name, LOWER(CONCAT(LEFT(first_name, 1), LEFT(last_name, 3))) AS login FROM aggregates.batman;
