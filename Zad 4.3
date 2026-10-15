@@ -1,0 +1,23 @@
+USE Pracownicy;
+
+SELECT * FROM Pracownicy 
+WHERE Nazwisko = 'KOWALCZYK';
+
+SELECT * FROM Pracownicy 
+WHERE Wiek BETWEEN 30 and 40
+
+SELECT * FROM Pracownicy 
+WHERE Nazwisko NOT LIKE '%and'
+
+SELECT * FROM Pracownicy 
+WHERE ID BETWEEN 1 and 7
+
+SELECT * FROM Pracownicy 
+WHERE ID IS NULL 
+   OR Imie IS NULL 
+   OR Nazwisko IS NULL 
+   OR Wiek IS NULL 
+   OR Kurs IS NULL 
+   
+SELECT * FROM Pracownicy 
+WHERE Kurs IS NULL OR Kurs = '';
