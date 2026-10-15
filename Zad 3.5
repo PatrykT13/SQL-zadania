@@ -1,0 +1,32 @@
+CREATE DATABASE Moje_zainteresowania
+
+USE Moje_zainteresowania
+
+CREATE TABLE Moje_zainteresowania (
+ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+Nazwa VARCHAR (50) NOT NULL,
+Opis VARCHAR (250) NOT NULL,
+Data_realizacji YEAR)
+
+INSERT INTO Moje_zainteresowania(Nazwa, Opis)
+VALUES ('Zwiedzanie','Podróż do Londynu'),
+('Piłka Nożna','Turniej w Rybniku'),
+('Zdjęcia','Kurs Fotograficzny'),
+('Góry','Zdobycie szczytu Rysy'),
+('Gotowanie','Kurs gotowania z kuchni azjatycki')
+
+SELECT * FROM Moje_zainteresowania
+
+INSERT INTO Moje_zainteresowania (Nazwa, Opis,Data_realizacji)
+VALUES ('Mecze piłkarskie','Wyjazd na mecz do Angli',2027)
+
+UPDATE Moje_zainteresowania
+SET Data_realizacji='2026'
+WHERE id=4
+
+SELECT * FROM Moje_zainteresowania
+
+DELETE FROM Moje_zainteresowania
+WHERE id IN(1,2,3,5)
+
+SELECT * FROM Moje_zainteresowania
