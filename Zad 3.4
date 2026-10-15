@@ -1,0 +1,51 @@
+CREATE DATABASE Lista_Pracowników
+
+USE Lista_Pracowników
+
+CREATE TABLE Pracownicy (
+ID INTEGER PRIMARY KEY,
+Imię VARCHAR (50) NOT NULL,
+Nazwisko VARCHAR (50) NOT NULL,
+Stanowisko VARCHAR (50) NOT NULL,
+Dział VARCHAR (50) NOT NULL)
+
+INSERT INTO Pracownicy (ID, Imię, Nazwisko, Stanowisko, Dział)
+VALUES (1,'Jan','Kowalski','Data Analyst','Analyst'),
+(2,'Paulina','Żyła','Account Manager','Finance'),
+(3,'Karol','Stoch','Consultant','Analyst'),
+(4,'Piotr','Lech','Manager','Analyst'),
+(5,'Paweł','Perła','Senior Director','Finance')
+
+SELECT * FROM Pracownicy
+
+ALTER TABLE Pracownicy
+ADD Data_zatrudnienia DATE
+
+SELECT * FROM Pracownicy
+
+INSERT INTO Pracownicy (ID, Imię, Nazwisko, Stanowisko, Dział, Data_zatrudnienia)
+VALUES (6,'Patryk','Kowal','Senior Data Analyst','Analyst','2025-01-01')
+
+SELECT * FROM Pracownicy
+
+UPDATE Pracownicy
+SET Data_zatrudnienia='2024-01-01'
+WHERE id=1
+
+UPDATE Pracownicy
+SET Data_zatrudnienia='2023-01-01'
+WHERE id=2
+
+UPDATE Pracownicy
+SET Data_zatrudnienia='2022-01-01'
+WHERE id=3
+
+UPDATE Pracownicy
+SET Data_zatrudnienia='2021-01-01'
+WHERE id=4
+
+UPDATE Pracownicy
+SET Data_zatrudnienia='2020-01-01'
+WHERE id=5
+
+SELECT * FROM Pracownicy
