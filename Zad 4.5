@@ -1,0 +1,20 @@
+USE Pracownicy;
+
+ALTER TABLE Pracownicy 
+RENAME COLUMN Szkolenie TO Kurs;
+
+SELECT DISTINCT Imie FROM Pracownicy;
+
+SELECT DISTINCT Nazwisko FROM Pracownicy;
+
+SELECT DISTINCT Kurs FROM Pracownicy 
+WHERE Nazwisko = 'KOWALCZYK';
+
+SELECT * FROM Pracownicy 
+WHERE Wiek IS NULL;
+
+SELECT Imie, Wiek FROM Pracownicy 
+WHERE Imie = 'Patryk';
+
+RENAME TABLE Pracownicy TO Mentorzy;
+
